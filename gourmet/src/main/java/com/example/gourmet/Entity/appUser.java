@@ -22,7 +22,6 @@ public class appUser {
     private String email;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-    private String adresse;
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<appRole> userRoles = new ArrayList<>();
 }

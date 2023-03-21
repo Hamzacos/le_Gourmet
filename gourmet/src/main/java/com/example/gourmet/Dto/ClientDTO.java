@@ -1,17 +1,14 @@
-package com.example.gourmet.Entity;
+package com.example.gourmet.Dto;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class admin extends appUser{
-
+public class ClientDTO extends AppUserDTO {
     private String adresse;
 
 }

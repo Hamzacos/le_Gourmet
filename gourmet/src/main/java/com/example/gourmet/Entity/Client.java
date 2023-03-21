@@ -12,5 +12,6 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Client extends appUser{
 
+    private String adresse;
 
 }
