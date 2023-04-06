@@ -11,7 +11,7 @@ import java.util.Collection;
 @Data
 public class AppUserDTO {
 
-    private Long idUser;
+    private Long id_user;
     private String nomComplet;
     private String email;
     private Collection<String> userRoles;

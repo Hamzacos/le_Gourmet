@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Entity
+//@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,10 +18,14 @@ public class appUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_user;
-    private String nom_complet;
+    private String nomComplet;
     private String email;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<appRole> userRoles = new ArrayList<>();
+
+    public void addRole(appRole role){
+        this.getUserRoles().add(role);
+    }
 }

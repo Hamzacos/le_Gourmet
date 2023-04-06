@@ -19,7 +19,8 @@ public class ClientController {
 
 
     @PostMapping("/add")
-    ClientDTO addClient(ClientDTO clientDTO){
+    ClientDTO addClient(@RequestBody  ClientDTO clientDTO){
         return  clientService.registerClient(clientDTO);
     }
 }
+

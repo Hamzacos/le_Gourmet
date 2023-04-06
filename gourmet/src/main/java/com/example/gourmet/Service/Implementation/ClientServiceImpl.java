@@ -1,7 +1,6 @@
 package com.example.gourmet.Service.Implementation;
 
 import com.example.gourmet.Dto.ClientDTO;
-import com.example.gourmet.Entity.Client;
 import com.example.gourmet.Repository.ClienRepository;
 import com.example.gourmet.Service.ClientService;
 import org.modelmapper.ModelMapper;
@@ -25,10 +24,15 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public ClientDTO registerClient(ClientDTO clientDTO) {
+        /*if (clientDTO.getNomComplet() == null || clientDTO.getEmail() == null || clientDTO.getId_user() == null) {
+            throw new EntityNotFoundException("Le nom complet, l'email et le mot de passe sont obligatoires.");
+        }*/
+
         Client client = modelMapper.map(clientDTO, Client.class);
-        Client clientSauvegarde = clientRepository.save(client);
-        return modelMapper.map(clientSauvegarde, ClientDTO.class);
+        client = clientRepository.save(client);
+        return modelMapper.map(client, ClientDTO.class);
     }
+
 
     @Override
     public List<ClientDTO> findAllClient() {
@@ -54,7 +58,7 @@ public class ClientServiceImpl implements ClientService {
         Optional<Client> clientOptional = clientRepository.findById(id);
         if (clientOptional.isPresent()) {
             Client client = clientOptional.get();
-            client.setNom_complet(clientDTO.getNomComplet());
+            client.setNomComplet(clientDTO.getNomComplet());
             client.setEmail(clientDTO.getEmail());
             client.setAdresse(clientDTO.getAdresse());
             Client clientSauvegarde = clientRepository.save(client);

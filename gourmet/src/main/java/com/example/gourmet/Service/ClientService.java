@@ -1,7 +1,6 @@
 package com.example.gourmet.Service;
 
 import com.example.gourmet.Dto.ClientDTO;
-import com.example.gourmet.Entity.Client;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1117,6 +1117,7 @@
 											"model": {
 												"$ref": "AAAAAAGGeoMDeiuWC9k="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 301,
 											"top": 332,
@@ -1130,7 +1131,7 @@
 									"left": 296,
 									"top": 297,
 									"width": 112,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1143,7 +1144,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 296,
-									"top": 350,
+									"top": 335,
 									"width": 112,
 									"height": 10
 								},
@@ -5188,7 +5189,8 @@
 								"$ref": "AAAAAAGGfa203NMrQUk="
 							},
 							"name": "client_id",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					]
 				}
