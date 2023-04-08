@@ -1,6 +1,7 @@
 package com.example.gourmet.Dto;
 
 
+import com.example.gourmet.Entity.appUser;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,7 @@ public class RestaurantDTO {
     private double noteMoyenne;
     private String cuisine;
     private String image;
-    private RestaurateurDTO restaurateur;
+    private appUser manger;
     private Set<PlatDTO> plats;
     private Set<ReservationDTO> reservations;
 

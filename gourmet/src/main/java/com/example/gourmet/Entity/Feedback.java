@@ -22,5 +22,5 @@ public class Feedback {
     private Plat plat;
 
     @ManyToOne
-    private Client client;
+    private appUser client;
 }

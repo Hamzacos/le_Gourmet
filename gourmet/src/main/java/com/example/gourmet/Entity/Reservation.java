@@ -24,5 +24,5 @@ public class Reservation {
     private Restaurant restaurant;
 
     @ManyToOne
-    private Client client;
+    private appUser client;
 }

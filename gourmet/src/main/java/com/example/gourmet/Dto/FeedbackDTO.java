@@ -12,5 +12,4 @@ public class FeedbackDTO {
     private String contenu;
     private int note;
     private PlatDTO plat;
-    private ClientDTO client;
 }

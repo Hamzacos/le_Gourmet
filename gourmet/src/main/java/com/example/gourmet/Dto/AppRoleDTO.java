@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class AppRoleDTO {
 
     private Long id;
-    private String nomRole;
+    private String roleName;
 }

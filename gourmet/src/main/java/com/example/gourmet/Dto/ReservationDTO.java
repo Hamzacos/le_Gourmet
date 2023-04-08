@@ -1,5 +1,6 @@
 package com.example.gourmet.Dto;
 
+import com.example.gourmet.Entity.appUser;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,6 @@ public class ReservationDTO {
     private LocalDate date;
     private int nombrePersonnes;
     private RestaurantDTO restaurant;
-    private ClientDTO client;
+    private appUser client;
 
 }

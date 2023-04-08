@@ -28,7 +28,7 @@ public class Restaurant {
     private String image;
 
     @ManyToOne
-    private Restaurateur restaurateur;
+    private appUser manager;
 
     @OneToMany(mappedBy = "restaurant")
     private Set<Plat> plats = new HashSet<>();
