@@ -17,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class appUser {
 
-    @Id
+   /* @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_user;
     private String nomComplet;
@@ -26,7 +26,19 @@ public class appUser {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<appRole> userRoles = new ArrayList<>();*/
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Integer id;
+    private String fullName;
+    private String username;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+    private String email;
+
+    @ManyToMany(fetch = FetchType.EAGER)
     private Collection<appRole> userRoles = new ArrayList<>();
+
     @OneToMany(mappedBy = "manager")
     private Set<Restaurant> restaurants = new HashSet<>();
 

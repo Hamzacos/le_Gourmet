@@ -9,14 +9,14 @@ public class myUser extends User {
 
 
     private int id;
-    private String nomComplet;
+    private String fullName;
 
 
     public myUser (int id, String username, String password, Collection<? extends GrantedAuthority> authorities,
                    String fullName) {
         super(username, password, authorities);
         this.id = id;
-        this.nomComplet = nomComplet;
+        this.fullName = fullName;
     }
 
 
@@ -24,7 +24,7 @@ public class myUser extends User {
         return id;
     }
 
-    public String nomComplet() {
-        return nomComplet;
+    public String getFullName() {
+        return fullName;
     }
 }

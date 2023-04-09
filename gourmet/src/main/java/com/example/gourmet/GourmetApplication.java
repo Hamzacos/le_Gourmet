@@ -29,20 +29,19 @@ public class GourmetApplication {
     @Bean
 	CommandLineRunner start(AdminServiceImpl accountService){
         return args -> {
-           /* accountService.addNewRole(new appRole(null,"Client"));
+            accountService.addNewRole(new appRole(null,"Client"));
             accountService.addNewRole(new appRole(null,"Admin"));
             accountService.addNewRole(new appRole(null,"Manger"));
 
-            accountService.saveUser(new appUser(null,"hamza laqraa","shadow","1234","test@test.com",new ArrayList<>(),new HashSet<>()));
-            accountService.saveUser(new appUser(null,"hamid bassou","darkthanblack","1234","hamid@test.com",new ArrayList<>(),new HashSet<>()));
-            accountService.saveUser(new appUser(null,"hicham laqraa","chef","1234","hicham@test.com",new ArrayList<>(),new HashSet<>()));
+			 accountService.saveUser(new appUser(null,"hamza laqraa","shadow","1234","test@test.com",new ArrayList<>(),new HashSet<>()));
+			 accountService.saveUser(new appUser(null,"hamid bassou","soul","1234","hamid@test.com",new ArrayList<>(),new HashSet<>()));
+			accountService.saveUser(new appUser(null,"salim ahmad","curry","1234","salim@test.com",new ArrayList<>(),new HashSet<>()));
 
 
 
-
-            accountService.addRoleToUser("shadow","Client");
-            accountService.addRoleToUser("darkthanblack","Admin");*/
-            //accountService.addRoleToUser("chef","Manger");
+			accountService.addRoleToUser("shadow","Client");
+            accountService.addRoleToUser("Soul","Admin");
+			accountService.addRoleToUser("curry","Manger");
 
         };
     }
