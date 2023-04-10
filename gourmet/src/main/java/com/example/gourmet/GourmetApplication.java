@@ -26,7 +26,7 @@ public class GourmetApplication {
 	}
 
 
-    @Bean
+  /*  @Bean
 	CommandLineRunner start(AdminServiceImpl accountService){
         return args -> {
             accountService.addNewRole(new appRole(null,"Client"));
@@ -44,6 +44,6 @@ public class GourmetApplication {
 			accountService.addRoleToUser("curry","Manger");
 
         };
-    }
+    }*/
 
 }

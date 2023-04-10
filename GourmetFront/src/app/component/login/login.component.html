@@ -6,9 +6,9 @@
                 <p>No Account? <a href="signup.html">Sign up</a></p>
             </div>
             <div class="box">
-                <form class="form">
-                    <input type="text" class="username" placeholder="Username" required>
-                    <input type="password" class="password" placeholder="Password" required>
+                <form class="form" (submit)="onSubmit()">
+                    <input type="text" class="username" placeholder="Username" name="username" [(ngModel)]="user.username" required>
+                    <input type="password" class="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
                     <input type="submit" class="button" value="Login">
                 </form>
             </div>
