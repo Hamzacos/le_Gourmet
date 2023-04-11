@@ -1,0 +1,39 @@
+<!-- Hero -->
+<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('assets/mm.jpg');
+    height: 400px;
+  ">
+  <div class="mask" >
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-dark py-5">
+        <img src="https://www.tasteatlas.com/regions/image?borderColor=%23fff&height=180&innerRegionFillColor=%23f8533d&regionid=119&width=360" alt="Image description">
+        <h4 class="mb-3 text-white">{{ restaurants[0].pays }}</h4>
+        <a class="btn btn-light" href="#!" role="button"><i class="icon icon--pin"></i> Voir la Carte </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Container px-5">
+  <h2 class=" pt-5">Où manger local ?</h2>
+  <p >Les meilleures adresses traditionnelles du Maroc, recommandées par les professionnels de la restauration</p>
+</div>
+
+
+<p-carousel [value]="restaurants" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+  <ng-template let-restaurant pTemplate="item">
+    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+      <div class="mb-3">
+        <img [src]="getImageUrl(restaurant.name)" alt="{{restaurant.name}}" class="card-img-top img" alt="..." />
+      </div>
+      <div>
+        <h5 class="card-title">{{restaurant.name}}</h5>
+        <p class="card-text">{{restaurant.cuisine}}</p>
+        <div class="car-buttons mt-5">
+          <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+          <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>
+

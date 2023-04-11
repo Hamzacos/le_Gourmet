@@ -1,0 +1,9 @@
+.p-carousel-prev, .p-carousel-next{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+.img{
+  width : 400px;
+  height : 200px;
+}

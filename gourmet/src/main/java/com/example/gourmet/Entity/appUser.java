@@ -1,5 +1,6 @@
 package com.example.gourmet.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,11 +35,12 @@ public class appUser {
     private String username;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-    private String email;
+//    private String email;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<appRole> userRoles = new ArrayList<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "manager")
     private Set<Restaurant> restaurants = new HashSet<>();
 
